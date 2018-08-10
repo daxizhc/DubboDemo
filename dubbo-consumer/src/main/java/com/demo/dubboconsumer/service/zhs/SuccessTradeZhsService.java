@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.darcytech.api.hades.dto.ApiUser;
+import com.darcytech.api.hades.dto.QuickViewDto;
 import com.darcytech.api.hades.dto.SuccessTradeZhsDto;
 import com.darcytech.api.hades.service.SuccessTradeZhsServiceApi;
 
@@ -19,7 +20,7 @@ public class SuccessTradeZhsService {
         return successTradeZhsServiceApi.findSuccessTradeByTid(tids);
     }
 
-    public String findQuickViewByUserId(ApiUser apiUser) {
+    public QuickViewDto findQuickViewByUserId(ApiUser apiUser) {
         return successTradeZhsServiceApi.findQuickViewByUserId(apiUser);
     }
 
