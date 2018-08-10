@@ -1,4 +1,4 @@
-package com.demo.dubboconsumer.service;
+package com.demo.dubboconsumer.service.test;
 
 import org.springframework.stereotype.Service;
 

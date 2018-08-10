@@ -4,11 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
-import com.demo.dubboconsumer.service.TestService;
+import com.demo.dubboconsumer.service.test.TestService;
 
 @SpringBootApplication
-@DubboComponentScan(basePackages = "com.demo.dubboconsumer.service")
+//@DubboComponentScan(basePackages = "com.demo.dubboconsumer.service")
 public class DubboConsumerApplication {
 
     public static void main(String[] args) {

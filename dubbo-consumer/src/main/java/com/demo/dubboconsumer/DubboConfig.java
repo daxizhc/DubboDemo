@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ConsumerConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
+import com.alibaba.dubbo.config.spring.AnnotationBean;
 
 @Configuration
 public class DubboConfig {
@@ -29,6 +30,14 @@ public class DubboConfig {
         RegistryConfig registryConfig = new RegistryConfig();
         registryConfig.setAddress("zookeeper://127.0.0.1:2181");
         return registryConfig;
+    }
+
+    // @DubboComponentScan 用不了，用这个扫描
+    @Bean
+    public AnnotationBean annotationBean() {
+        AnnotationBean annotationBean = new AnnotationBean();
+        annotationBean.setPackage("com.demo.dubboconsumer.service.zhs");
+        return annotationBean;
     }
 
 }
