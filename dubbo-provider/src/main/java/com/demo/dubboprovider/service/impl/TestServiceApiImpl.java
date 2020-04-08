@@ -1,6 +1,7 @@
 package com.demo.dubboprovider.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.Service;
+
 import com.demo.api.service.TestServiceApi;
 
 @Service

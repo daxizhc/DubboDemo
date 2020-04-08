@@ -1,15 +1,19 @@
 package com.demo.dubboprovider;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.io.IOException;
 
-import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
+import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
 @DubboComponentScan(basePackages = "com.demo.dubboprovider.service.impl")
+@ComponentScan
 public class DubboProviderApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(DubboProviderApplication.class, args);
+    public static void main(String[] args) throws IOException {
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DubboProviderApplication.class);
+        context.start();
+        System.out.println("dubbo-provider 启动成功");
+        System.in.read();
     }
 }

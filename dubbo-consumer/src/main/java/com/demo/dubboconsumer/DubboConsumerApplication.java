@@ -1,10 +1,10 @@
 package com.demo.dubboconsumer;
 
+import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.alibaba.dubbo.config.spring.context.annotation.DubboComponentScan;
 import com.demo.dubboconsumer.service.TestService;
 
 @SpringBootApplication

@@ -1,10 +1,9 @@
 package com.demo.dubboprovider;
 
+import org.apache.dubbo.config.ApplicationConfig;
+import org.apache.dubbo.config.RegistryConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import com.alibaba.dubbo.config.ApplicationConfig;
-import com.alibaba.dubbo.config.RegistryConfig;
 
 @Configuration
 public class DubboConfig {
@@ -19,7 +18,7 @@ public class DubboConfig {
     @Bean
     public RegistryConfig registryConfig() {
         RegistryConfig registryConfig = new RegistryConfig();
-        registryConfig.setAddress("zookeeper://127.0.0.1:2181");
+        registryConfig.setAddress("zookeeper://118.190.39.204:2181");
         return registryConfig;
     }
 
